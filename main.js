@@ -70,3 +70,33 @@ maths(7);
 
 
 // Challenge-2 END------!
+
+// Challenge-3 START-------!
+
+// Challenge-3 END ------!
+
+// Challenge-4 Start -----!
+
+
+var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+var challenge4 = ["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"];
+
+
+function geeseSuck (birds) {
+    var antiGeeseCoalition = birds;
+    console.log(antiGeeseCoalition);
+    for(var i = 0; i < birds.length; i++){
+        var currentBird = birds[i];
+        for(var j = 0; j < geese.length; j++){
+            var currentGoose = geese[j];
+            if(currentGoose === currentBird){
+                delete antiGeeseCoalition[i];
+            }
+        }
+    }
+
+    console.log(antiGeeseCoalition);
+
+}
+
+geeseSuck(challenge4);
