@@ -90,9 +90,11 @@ function geeseSuck (birds) {
         for(var j = 0; j < geese.length; j++){
             var currentGoose = geese[j];
             if(currentGoose === currentBird){
-                delete antiGeeseCoalition[i];
+                antiGeeseCoalition.splice(currentBird, 1);
+                i - 1;
             }
         }
+        
     }
 
     console.log(antiGeeseCoalition);
