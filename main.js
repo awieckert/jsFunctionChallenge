@@ -104,3 +104,21 @@ function geeseSuck (birds) {
 geeseSuck(challenge4);
 
 // Adding comment so I can commit on branch and then push.
+
+// Challenge-5 Functions START-----!
+
+// challenge5("I love pie"); //["love", "pie", "I"]
+// challenge5("bears live in the woods"); //["live", "the", "in", "bears", "woods"]
+
+
+function weirdSort (someString) {
+    var arrayOfSomeString = someString.toLowerCase().split(' ');
+    var arrayOfLastLetters = [];
+    console.log('arrayOfSomeString: ', arrayOfSomeString);
+    for(var i = 0; i < arrayOfSomeString; i++){
+        arrayOfLastLetters += arrayOfSomeString[i].splice(-1);
+    }
+    console.log("ArrayofLastLetters: ", arrayOfLastLetters);
+}
+
+weirdSort("bears live in the woods");
