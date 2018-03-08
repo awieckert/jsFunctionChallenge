@@ -70,3 +70,76 @@ maths(7);
 
 
 // Challenge-2 END------!
+
+// Challenge-3 START-------!
+
+// Challenge-3 END ------!
+
+// Challenge-4 Start -----!
+
+
+var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+var challenge4 = ["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"];
+
+
+function geeseSuck (birds) {
+    var antiGeeseCoalition = birds;
+    console.log(antiGeeseCoalition);
+    for(var i = 0; i < birds.length; i++){
+        var currentBird = birds[i];
+        for(var j = 0; j < geese.length; j++){
+            var currentGoose = geese[j];
+            if(currentGoose === currentBird){
+                antiGeeseCoalition.splice(currentBird, 1);
+                i - 1;
+            }
+        }
+        
+    }
+
+    console.log(antiGeeseCoalition);
+
+}
+
+geeseSuck(challenge4);
+
+// Adding comment so I can commit on branch and then push.
+
+// Challenge-5 Functions START-----!
+
+// challenge5("I love pie"); //["love", "pie", "I"]
+// challenge5("bears live in the woods"); //["live", "the", "in", "bears", "woods"]
+
+
+// function weirdSort (someString) {
+//     var arrayOfSomeString = someString.toLowerCase().split(' ');
+//     var arrayOfLastLetters = [];
+//     console.log('arrayOfSomeString: ', arrayOfSomeString);
+//     var checkingIndex;
+//     var nextIndex; 
+//     console.log("Checking char code: ", checkingIndex);
+
+//     for(var i = 0; i < arrayOfSomeString.length; i++){
+//             checkingIndex = arrayOfSomeString[i].charCodeAt(arrayOfSomeString[i].length - 1);
+//             if( arrayOfSomeString[i+1] <= ((arrayOfSomeString.length) - 1) ){
+//             nextIndex = arrayOfSomeString[i+1].charCodeAt(arrayOfSomeString[i+1].length - 1);
+//             };
+//             console.log("Next Index: ", nextIndex);
+//             console.log("Checking index: ", checkingIndex);
+             
+//     }
+//     console.log("checkingIndex: ", checkingIndex, "nextIndex: ", nextIndex);
+// }
+
+// weirdSort("Bears live in the woodz");
+
+function ezSort (anotherString){
+    var arrayOfString = anotherString.split(' ');
+    arrayOfString.sort((a,b) => a.charCodeAt(a.length -1) - b.charCodeAt(b.length -1));
+    stringToPrint = "<h1>" + arrayOfString + "</h1>"
+    writeToDom(stringToPrint, "challenge-5");
+}
+
+ezSort("Bears live in the woodz");
+
+
