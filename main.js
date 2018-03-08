@@ -111,25 +111,35 @@ geeseSuck(challenge4);
 // challenge5("bears live in the woods"); //["live", "the", "in", "bears", "woods"]
 
 
-function weirdSort (someString) {
-    var arrayOfSomeString = someString.toLowerCase().split(' ');
-    var arrayOfLastLetters = [];
-    console.log('arrayOfSomeString: ', arrayOfSomeString);
-    var checkingIndex;
-    var nextIndex; 
-    console.log("Checking char code: ", checkingIndex);
+// function weirdSort (someString) {
+//     var arrayOfSomeString = someString.toLowerCase().split(' ');
+//     var arrayOfLastLetters = [];
+//     console.log('arrayOfSomeString: ', arrayOfSomeString);
+//     var checkingIndex;
+//     var nextIndex; 
+//     console.log("Checking char code: ", checkingIndex);
 
-    for(var i = 0; i < arrayOfSomeString.length; i++){
-            checkingIndex = arrayOfSomeString[i].charCodeAt(arrayOfSomeString[i].length - 1);
-            if( arrayOfSomeString[i+1] <= ((arrayOfSomeString.length) - 1) ){
-            nextIndex = arrayOfSomeString[i+1].charCodeAt(arrayOfSomeString[i+1].length - 1);
-            };
-            console.log("Next Index: ", nextIndex);
-            console.log("Checking index: ", checkingIndex);
+//     for(var i = 0; i < arrayOfSomeString.length; i++){
+//             checkingIndex = arrayOfSomeString[i].charCodeAt(arrayOfSomeString[i].length - 1);
+//             if( arrayOfSomeString[i+1] <= ((arrayOfSomeString.length) - 1) ){
+//             nextIndex = arrayOfSomeString[i+1].charCodeAt(arrayOfSomeString[i+1].length - 1);
+//             };
+//             console.log("Next Index: ", nextIndex);
+//             console.log("Checking index: ", checkingIndex);
              
-    }
-    console.log("checkingIndex: ", checkingIndex, "nextIndex: ", nextIndex);
+//     }
+//     console.log("checkingIndex: ", checkingIndex, "nextIndex: ", nextIndex);
+// }
+
+// weirdSort("Bears live in the woodz");
+
+function ezSort (anotherString){
+    var arrayOfString = anotherString.split(' ');
+    arrayOfString.sort((a,b) => a.charCodeAt(a.length -1) - b.charCodeAt(b.length -1));
+    stringToPrint = "<h1>" + arrayOfString + "</h1>"
+    writeToDom(stringToPrint, "challenge-5");
 }
 
-weirdSort("Bears live in the woodz");
+ezSort("Bears live in the woodz");
+
 
