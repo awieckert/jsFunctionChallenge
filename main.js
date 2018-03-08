@@ -115,10 +115,16 @@ function weirdSort (someString) {
     var arrayOfSomeString = someString.toLowerCase().split(' ');
     var arrayOfLastLetters = [];
     console.log('arrayOfSomeString: ', arrayOfSomeString);
-    for(var i = 0; i < arrayOfSomeString; i++){
-        arrayOfLastLetters += arrayOfSomeString[i].splice(-1);
+    var checkingIndex;
+    var nextIndex; 
+    console.log("Checking char code: ", checkingIndex);
+
+    for(var i = 0; i < arrayOfSomeString.length; i++){
+            checkingIndex = arrayOfSomeString[i].charCodeAt(arrayOfSomeString[i].length - 1);
+            nextIndex = arrayOfSomeString[i + 1].charCodeAt(arrayOfSomeString[i + 1].length - 1); 
     }
-    console.log("ArrayofLastLetters: ", arrayOfLastLetters);
+    console.log("checkingIndex: ", checkingIndex, "nextIndex: ", nextIndex);
 }
 
-weirdSort("bears live in the woods");
+weirdSort("Bears live in the woodz");
+
