@@ -121,7 +121,12 @@ function weirdSort (someString) {
 
     for(var i = 0; i < arrayOfSomeString.length; i++){
             checkingIndex = arrayOfSomeString[i].charCodeAt(arrayOfSomeString[i].length - 1);
-            nextIndex = arrayOfSomeString[i + 1].charCodeAt(arrayOfSomeString[i + 1].length - 1); 
+            if( arrayOfSomeString[i+1] <= ((arrayOfSomeString.length) - 1) ){
+            nextIndex = arrayOfSomeString[i+1].charCodeAt(arrayOfSomeString[i+1].length - 1);
+            };
+            console.log("Next Index: ", nextIndex);
+            console.log("Checking index: ", checkingIndex);
+             
     }
     console.log("checkingIndex: ", checkingIndex, "nextIndex: ", nextIndex);
 }
