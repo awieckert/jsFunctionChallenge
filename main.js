@@ -73,6 +73,40 @@ maths(7);
 
 // Challenge-3 START-------!
 
+// challenge3([ 1, 2, 3]) //6
+// challenge1([ 1, 3, 8, 1, 8]) //12
+// challenge1([ -1, -1, 5, 2, -7])//-1
+// Loop through each index
+// Check if index appears more than once
+// if appears more than once remove it
+
+function summinator(arrayToSum) {
+    var arrayToUse = arrayToSum;
+
+    for(var i = 0; i < arrayToUse.length; i++){
+        var currentIndex = arrayToUse[i];
+            for(var j = i + 1; j < arrayToUse.length; j++) {
+                if(currentIndex === arrayToUse[j]){
+                arrayToUse.splice(j, 1);
+                j--;
+            } 
+        }
+    }
+    var sumOfArray = 0;
+    
+    for(var k = 0; k < arrayToUse.length; k++){
+        sumOfArray += arrayToUse[k];
+    }
+
+    var stringToPrint = "<h1>The sum of the Array is: " + sumOfArray + "</h1>";
+    writeToDom(stringToPrint, "challenge-3");
+}
+var testArray = [-1, -1, -1, 5, 5, 2, -7];
+summinator(testArray);
+
+
+
+
 // Challenge-3 END ------!
 
 // Challenge-4 Start -----!
@@ -141,5 +175,8 @@ function ezSort (anotherString){
 }
 
 ezSort("Bears live in the woodz");
+
+
+
 
 
